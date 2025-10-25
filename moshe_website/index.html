@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Moshe Shiri - IT Specialist & Computer Science Student. Experienced in system administration, networking, and software development with Python, C++, C#." />
+    <meta name="keywords" content="Moshe Shiri, IT Specialist, Computer Science, Python, C++, C#, System Administration, Networking, Software Development, Portfolio" />
+    <meta name="author" content="Moshe Shiri" />
+    <meta property="og:title" content="Moshe Shiri - IT Specialist & Developer" />
+    <meta property="og:description" content="Experienced IT professional transitioning into software development. Specializing in automation, system administration, and programming." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <title>Moshe Shiri - IT Specialist & Developer</title>
+  </head>
+  <body class="light" id="top">
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="loader__circle"></div>
+        <div class="loader__circle"></div>
+        <div class="loader__circle"></div>
+      </div>
+      <div class="loading-text">
+        <span>M</span><span>o</span><span>s</span><span>h</span><span>e</span>
+        <span>S</span><span>h</span><span>i</span><span>r</span><span>i</span>
+      </div>
+    </div>
+
+    <!-- Subtle Background -->
+    <div class="bg-pattern"></div>
+
+    <header class="header center">
+      <h3>
+        <a href="" class="link"
+          >Moshe Shiri.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#about">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#experience">Experience</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1 class="hero__greeting">Hi, I'm <span class="hero__name">Moshe Shiri</span></h1>
+            <div class="hero__typing-container">
+              <h2 class="hero__role">I'm an <span class="typing-text"></span><span class="cursor">|</span></h2>
+            </div>
+            <p class="hero__desc">
+              Experienced IT & Security Engineer with 5+ years in enterprise infrastructure and network administration, 
+              now pursuing software development. Dedicated to building scalable solutions and delivering 
+              high-performance applications that solve real-world challenges.
+            </p>
+            <div class="hero__cta">
+              <a href="https://drive.google.com/file/d/1bpJyjp5Z-yaQq_QsDG0XyzRU1AODFg1b/view?usp=sharing" class="btn btn--primary">
+                <i class="fas fa-download"></i> Download Resume
+              </a>
+              <a href="#contact" class="btn btn--outline">
+                <i class="fas fa-envelope"></i> Get In Touch
+              </a>
+            </div>
+            <div class="hero__social">
+              <a href="https://github.com/MosheShiri07" aria-label="github" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/moshe-shiri-403581217/" aria-label="linkedin" class="social-link">
+                <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+          <div class="hero__visual">
+            <div class="hero__avatar">
+              <img src="profile.jpg" alt="Moshe Shiri" class="profile-image">
+            </div>
+          </div>
+        </div>
+        <div class="hero__scroll-indicator">
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <span>Scroll to explore</span>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section about-section" id="about">
+        <div class="container">
+          <h2 class="section__title">About Me</h2>
+          <div class="about__grid">
+            <div class="about__text">
+              <h3>Professional Background</h3>
+              <p>
+                With over 5 years of experience in IT system administration and networking, I've developed a strong foundation 
+                in technology infrastructure. Currently pursuing my Computer Science degree while actively transitioning into 
+                software development.
+              </p>
+              <h3>Technical Expertise</h3>
+              <p>
+                Proficient in multiple programming languages including C, C++, C#, and Python. I enjoy tackling complex problems 
+                and creating efficient, scalable solutions. My experience spans from system automation to application development.
+              </p>
+              <div class="about__highlights">
+                <div class="highlight">
+                  <i class="fas fa-code"></i>
+                  <div>
+                    <h4>Clean Code</h4>
+                    <p>Writing maintainable, efficient code</p>
+                  </div>
+                </div>
+                <div class="highlight">
+                  <i class="fas fa-lightbulb"></i>
+                  <div>
+                    <h4>Problem Solving</h4>
+                    <p>Creative solutions to complex challenges</p>
+                  </div>
+                </div>
+                <div class="highlight">
+                  <i class="fas fa-graduation-cap"></i>
+                  <div>
+                    <h4>Continuous Learning</h4>
+                    <p>Always staying updated with latest tech</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about__stats">
+              <div class="stat-card">
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-target="20">0</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <div class="container">
+          <h2 class="section__title">Featured Projects</h2>
+          <div class="projects__filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="automation">Automation</button>
+            <button class="filter-btn" data-filter="development">Development</button>
+            <button class="filter-btn" data-filter="networking">Networking</button>
+          </div>
+
+        <div class="projects__grid">
+            <div class="project-card" data-category="automation">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/MosheShiri07" class="project-link" aria-label="view code">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project-link" aria-label="live demo">
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Automated IT System</h3>
+                <p class="project-description">
+                  Developed comprehensive automation scripts using PowerShell and Python to streamline IT operations, 
+                  reducing manual workload by 70% and improving system response times significantly.
+                </p>
+                <div class="project-stats">
+                  <span><i class="fas fa-clock"></i> 3 months</span>
+                  <span><i class="fas fa-code-branch"></i> 15+ scripts</span>
+                </div>
+            <ul class="project__stack">
+              <li class="project__stack-item">PowerShell</li>
+                  <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">Batch Scripting</li>
+            </ul>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="development">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/MosheShiri07/Moshiko-s-Projects/tree/main/FlooderGame" class="project-link" aria-label="view code">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://github.com/MosheShiri07/Moshiko-s-Projects/blob/main/FlooderGame/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202025-03-08%20200123.png" class="project-link" aria-label="live demo">
+                      <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Python Game Development</h3>
+                <p class="project-description">
+                  Created an engaging Flooder Game and multiple Python applications demonstrating advanced algorithmic thinking, 
+                  OOP principles, and GUI development using modern frameworks.
+                </p>
+                <div class="project-stats">
+                  <span><i class="fas fa-clock"></i> 2 months</span>
+                  <span><i class="fas fa-users"></i> Single Player</span>
+                </div>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+                  <li class="project__stack-item">Tkinter</li>
+              <li class="project__stack-item">Git</li>
+            </ul>
+              </div>
+            </div>
+
+            <div class="project-card" data-category="networking">
+              <div class="project-image">
+                <div class="project-placeholder">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/MosheShiri07" class="project-link" aria-label="view code">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="project-link" aria-label="live demo">
+                      <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Enterprise Network Infrastructure</h3>
+                <p class="project-description">
+                  Designed and implemented complex network architectures including VLANs, VoIP systems, and enterprise-grade 
+                  security solutions. Managed Windows Server environments and VMware infrastructure.
+                </p>
+                <div class="project-stats">
+                  <span><i class="fas fa-clock"></i> Ongoing</span>
+                  <span><i class="fas fa-server"></i> 100+ devices</span>
+                </div>
+            <ul class="project__stack">
+              <li class="project__stack-item">Network Switches</li>
+                  <li class="project__stack-item">VMware</li>
+                  <li class="project__stack-item">Windows Server</li>
+            </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <div class="container">
+          <h2 class="section__title">Technical Skills</h2>
+          <div class="skills__grid">
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-python"></i>
+              </div>
+              <h3>Python</h3>
+              <p>Automation & Scripting</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>C/C++</h3>
+              <p>System Programming</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-microsoft"></i>
+              </div>
+              <h3>C#</h3>
+              <p>Application Development</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-js-square"></i>
+              </div>
+              <h3>JavaScript</h3>
+              <p>Web Development</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-terminal"></i>
+              </div>
+              <h3>PowerShell</h3>
+              <p>Windows Automation</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Windows Server</h3>
+              <p>Enterprise Infrastructure</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-cube"></i>
+              </div>
+              <h3>VMware</h3>
+              <p>Virtualization</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+              <h3>Networking</h3>
+              <p>Infrastructure Design</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-aws"></i>
+              </div>
+              <h3>AWS</h3>
+              <p>Cloud Services</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-google"></i>
+              </div>
+              <h3>Google Cloud</h3>
+              <p>Cloud Platform</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <h3>Git</h3>
+              <p>Version Control</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>SQL</h3>
+              <p>Database Management</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <h3>HTML/CSS</h3>
+              <p>Frontend Development</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-plug"></i>
+              </div>
+              <h3>RESTful APIs</h3>
+              <p>Integration Services</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Cybersecurity</h3>
+              <p>Security Protocols</p>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-card__icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Active Directory</h3>
+              <p>Directory Services</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Timeline -->
+      <section class="section timeline" id="experience">
+        <div class="container">
+          <h2 class="section__title">Professional Journey</h2>
+          <div class="timeline__container">
+            <div class="timeline__item" data-aos="fade-right">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <div class="timeline__date">2021 - Present</div>
+                <h3>IT & Security Engineer</h3>
+                <h4>Enterprise Technology Solutions</h4>
+                <p>
+                  Leading system administration and network infrastructure management for enterprise environments. 
+                  Implementing automation solutions that improved operational efficiency by 70%.
+                </p>
+                <ul class="timeline__highlights">
+                  <li>Managed 100+ enterprise devices and servers</li>
+                  <li>Implemented VLAN and VoIP infrastructure</li>
+                  <li>Developed PowerShell automation scripts</li>
+                  <li>Maintained 99.9% system uptime</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item" data-aos="fade-left">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <div class="timeline__date">October 2021 - June 2024</div>
+                <h3>IT Specialist</h3>
+                <h4>Israel Defense Intelligence (IDI)</h4>
+                <p>
+                  IT specialist delivering enterprise-level infrastructure support and network administration 
+                  for high-priority military operations. Implemented advanced troubleshooting protocols and 
+                  automated system solutions in mission-critical environments.
+                </p>
+                <ul class="timeline__highlights">
+                  <li>Network administration and switch configuration</li>
+                  <li>Active Directory, SCCM, and ServiceNow management</li>
+                  <li>PowerShell automation and scripting</li>
+                  <li>Cisco and Polycom equipment support</li>
+                  <li>Domain management and security protocols</li>
+                  <li>VMware virtualization and hardware maintenance</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline__item" data-aos="fade-right">
+              <div class="timeline__marker"></div>
+              <div class="timeline__content">
+                <div class="timeline__date">2024 - Present</div>
+                <h3>Computer Science Student</h3>
+                <h4>H.I.T - Holon Institute of Technology</h4>
+                <p>
+                  Pursuing Computer Science degree while working professionally. 
+                  Focusing on software development, algorithms, and modern programming practices.
+                </p>
+                <ul class="timeline__highlights">
+                  <li>Mastered C, C++, C#, and Python</li>
+                  <li>Developed multiple programming projects</li>
+                  <li>Studied algorithms and data structures</li>
+                  <li>Maintained high academic performance</li>
+        </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Certifications & Education -->
+      <section class="section certifications" id="certifications">
+        <div class="container">
+          <h2 class="section__title">Certifications & Education</h2>
+          <div class="certifications__grid">
+            <div class="cert__card" data-aos="zoom-in">
+              <div class="cert__icon">
+                <i class="fab fa-aws"></i>
+              </div>
+              <h3>AWS Cloud Practitioner</h3>
+              <p>Amazon Web Services</p>
+              <span class="cert__status">In Progress</span>
+            </div>
+
+            <div class="cert__card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="cert__icon">
+                <i class="fab fa-google"></i>
+              </div>
+              <h3>Google Cloud Associate</h3>
+              <p>Google Cloud Platform</p>
+              <span class="cert__status">Planned</span>
+            </div>
+
+            <div class="cert__card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="cert__icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Computer Science Degree</h3>
+              <p>University Studies</p>
+              <span class="cert__status">In Progress</span>
+            </div>
+
+            <div class="cert__card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="cert__icon">
+                <i class="fas fa-network-wired"></i>
+              </div>
+                <h3>Network Certification</h3>
+                <p>Cisco CCNA</p>
+              <span class="cert__status">Planned</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <h2 class="section__title">Get In Touch</h2>
+          <div class="contact__content">
+            <div class="contact__info">
+              <h3>Let's Connect</h3>
+              <p>
+                I'm always interested in discussing new opportunities, collaborating on projects, 
+                or simply connecting with fellow developers and IT professionals.
+              </p>
+              <div class="contact__details">
+                <div class="contact__item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <h4>Email</h4>
+                    <a href="mailto:moshikoshiri03@gmail.com">moshikoshiri03@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact__item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <h4>Location</h4>
+                    <span>Israel</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__social">
+                <a href="https://github.com/MosheShiri07" class="social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/moshe-shiri-403581217/" class="social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+            <form class="contact__form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        href="https://github.com/MosheShiri07"
+        class="link footer__link"
+      >
+        Created By Moshe Shiri
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
