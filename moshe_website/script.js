@@ -106,10 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingElement = document.querySelector('.typing-text');
   if (typingElement) {
     const words = [
-      'Software Developer',
       'IT & Security Engineer',
-      'System Administrator',
-      'Problem Solver',
       'Tech Enthusiast'
     ];
     new TypeWriter(typingElement, words, 2000);
@@ -756,22 +753,6 @@ const initCustomCursor = () => {
   return;
 };
 
-// Aggressive cursor cleanup
-const removeAllCursors = () => {
-  const cursors = document.querySelectorAll('.custom-cursor, .custom-cursor-follower, [class*="cursor"], [id*="cursor"]');
-  cursors.forEach(el => {
-    el.remove();
-    el.style.display = 'none';
-    el.style.visibility = 'hidden';
-    el.style.opacity = '0';
-  });
-};
-
-// Run cleanup immediately and continuously
-removeAllCursors();
-setInterval(removeAllCursors, 50);
-document.addEventListener('mousemove', removeAllCursors);
-
 // Particle Background Effect
 const initParticles = () => {
   // Disable particles on mobile for performance
@@ -1008,11 +989,6 @@ const initTextAnimations = () => {
 
 // Initialize All Functions
 document.addEventListener('DOMContentLoaded', () => {
-  // Aggressive cursor cleanup
-  removeAllCursors();
-  setInterval(removeAllCursors, 100);
-  document.addEventListener('mousemove', removeAllCursors);
-  
   initLoadingScreen();
   initSubtleBackground();
   initAOS();
@@ -1028,27 +1004,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // New enhancements
   initScrollProgress();
   initCustomCursor();
-  initParticles();
-  initEnhancedScrollAnimations();
-  initMagneticButtons();
-  initTiltEffect();
-  initTextAnimations();
+
+  // Stability-first motion mode: keep UI clean and reduce scroll jank by disabling
+  // heavier / mouse-driven effects by default.
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionMode = 'mostlyLite'; // 'mostlyLite' or 'full'
+  const disableHeavyEffects = motionMode === 'mostlyLite' || prefersReduced;
+
+  if (!disableHeavyEffects) {
+    initParticles();
+    initEnhancedScrollAnimations();
+    initMagneticButtons();
+    initTiltEffect();
+    initTextAnimations();
+  }
 
   // Add loading complete class to body
   setTimeout(() => {
     body.classList.add('loaded');
   }, 1500);
-});
-
-// Loading Animation
-window.addEventListener('load', () => {
-  const loadingScreen = document.querySelector('.loading-screen');
-  if (loadingScreen) {
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => {
-      loadingScreen.style.display = 'none';
-    }, 500);
-  }
 });
 
 // Add some additional CSS for active navigation via JavaScript
