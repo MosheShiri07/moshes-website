@@ -1,7 +1,9 @@
 // DOM Elements
 const body = document.body;
-const btnTheme = document.querySelector('.fa-moon');
-const btnHamburger = document.querySelector('.fa-bars');
+const themeToggleBtn = document.getElementById('theme-toggle');
+const btnTheme = document.getElementById('btn-theme');
+const navToggleBtn = document.getElementById('nav-toggle');
+const btnHamburger = navToggleBtn?.querySelector('i');
 const navList = document.querySelector('.nav__list');
 
 // Theme Management
@@ -18,6 +20,9 @@ if (getBodyTheme && getBtnTheme) {
 } else {
   addThemeClass('light', 'fa-moon');
 }
+if (themeToggleBtn) {
+  themeToggleBtn.setAttribute('aria-pressed', String(body.classList.contains('dark')));
+}
 
 const isDark = () => body.classList.contains('dark');
 
@@ -27,6 +32,9 @@ const setTheme = (bodyClass, btnClass) => {
     btnTheme.classList.remove('fa-moon', 'fa-sun');
     addThemeClass(bodyClass, btnClass);
   }
+  if (themeToggleBtn) {
+    themeToggleBtn.setAttribute('aria-pressed', String(bodyClass === 'dark'));
+  }
   localStorage.setItem('portfolio-theme', bodyClass);
   localStorage.setItem('portfolio-btn-theme', btnClass);
 };
@@ -35,8 +43,8 @@ const toggleTheme = () => {
   isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun');
 };
 
-if (btnTheme) {
-  btnTheme.addEventListener('click', toggleTheme);
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', toggleTheme);
 }
 
 // Mobile Navigation
@@ -46,16 +54,18 @@ const displayList = () => {
       btnHamburger.classList.remove('fa-bars');
       btnHamburger.classList.add('fa-times');
       navList.classList.add('display-nav-list');
+      navToggleBtn?.setAttribute('aria-expanded', 'true');
     } else {
       btnHamburger.classList.remove('fa-times');
       btnHamburger.classList.add('fa-bars');
       navList.classList.remove('display-nav-list');
+      navToggleBtn?.setAttribute('aria-expanded', 'false');
     }
   }
 };
 
-if (btnHamburger) {
-  btnHamburger.addEventListener('click', displayList);
+if (navToggleBtn) {
+  navToggleBtn.addEventListener('click', displayList);
 }
 
 // Typing Animation
@@ -316,7 +326,12 @@ const initScrollAnimations = () => {
 
   // Observe all sections
   const sections = document.querySelectorAll('.section');
-  sections.forEach(section => observer.observe(section));
+  sections.forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(16px)';
+    section.style.transition = 'opacity 0.6s var(--ease-standard), transform 0.6s var(--ease-standard)';
+    observer.observe(section);
+  });
 };
 
 // Smooth Scrolling for Navigation Links
@@ -989,13 +1004,23 @@ const initTextAnimations = () => {
 
 // Initialize All Functions
 document.addEventListener('DOMContentLoaded', () => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   initLoadingScreen();
   initSubtleBackground();
   initAOS();
   initAdvancedProjectFilter();
   initAdvancedContactForm();
   initScrollToTop();
-  initScrollAnimations();
+  if (prefersReduced) {
+    document.querySelectorAll('.section').forEach((section) => {
+      section.style.opacity = '1';
+      section.style.transform = 'none';
+      section.style.transition = 'none';
+    });
+  } else {
+    initScrollAnimations();
+  }
   initAdvancedSkillBars();
   initSmoothScrolling();
   initActiveNavigation();
@@ -1007,7 +1032,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Stability-first motion mode: keep UI clean and reduce scroll jank by disabling
   // heavier / mouse-driven effects by default.
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const motionMode = 'mostlyLite'; // 'mostlyLite' or 'full'
   const disableHeavyEffects = motionMode === 'mostlyLite' || prefersReduced;
 

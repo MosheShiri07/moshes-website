@@ -49,7 +49,7 @@
       </h3>
 
       <nav class="nav center">
-        <ul class="nav__list center">
+        <ul class="nav__list center" id="primary-navigation">
           <li class="nav__list-item">
             <a class="link link--nav" href="#about">About</a>
           </li>
@@ -67,13 +67,22 @@
           </li>
         </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <button
+          type="button"
+          id="theme-toggle"
+          aria-label="toggle theme"
+          aria-pressed="false"
+          class="btn btn--icon"
+        >
           <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
         </button>
 
         <button
           type="button"
+          id="nav-toggle"
           aria-label="toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
           class="btn btn--icon nav__hamburger"
         >
           <i aria-hidden="true" class="fas fa-bars"></i>
@@ -96,7 +105,7 @@
               high-performance applications that solve real-world challenges.
             </p>
             <div class="hero__cta">
-              <a href="https://drive.google.com/file/d/1bpJyjp5Z-yaQq_QsDG0XyzRU1AODFg1b/view?usp=sharing" class="btn btn--primary">
+              <a href="https://drive.google.com/file/d/1bpJyjp5Z-yaQq_QsDG0XyzRU1AODFg1b/view?usp=sharing" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
                 <i class="fas fa-download"></i> Download Resume
               </a>
               <a href="#contact" class="btn btn--outline">
@@ -104,10 +113,10 @@
               </a>
             </div>
             <div class="hero__social">
-              <a href="https://github.com/MosheShiri07" aria-label="github" class="social-link">
+              <a href="https://github.com/MosheShiri07" aria-label="github" class="social-link" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/moshe-shiri-403581217/" aria-label="linkedin" class="social-link">
+              <a href="https://www.linkedin.com/in/moshe-shiri-403581217/" aria-label="linkedin" class="social-link" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin"></i>
           </a>
         </div>
@@ -212,7 +221,7 @@
                 </div>
                 <div class="project-overlay">
                   <div class="project-links">
-                    <a href="https://github.com/MosheShiri07" class="project-link" aria-label="view code">
+                    <a href="https://github.com/MosheShiri07" class="project-link" aria-label="view code" target="_blank" rel="noopener noreferrer">
                       <i class="fab fa-github"></i>
                     </a>
                     <a href="#" class="project-link" aria-label="live demo">
@@ -227,11 +236,11 @@
                   Developed comprehensive automation scripts using PowerShell and Python to streamline IT operations, 
                   reducing manual workload by 70% and improving system response times significantly.
                 </p>
-                <div class="project-stats">
+                <div class="project-stats meta-row">
                   <span><i class="fas fa-clock"></i> 3 months</span>
                   <span><i class="fas fa-code-branch"></i> 15+ scripts</span>
                 </div>
-            <ul class="project__stack">
+            <ul class="project__stack stack-row">
               <li class="project__stack-item">PowerShell</li>
                   <li class="project__stack-item">Python</li>
               <li class="project__stack-item">Batch Scripting</li>
@@ -246,10 +255,10 @@
                 </div>
                 <div class="project-overlay">
                   <div class="project-links">
-                    <a href="https://github.com/MosheShiri07/Moshiko-s-Projects/tree/main/FlooderGame" class="project-link" aria-label="view code">
+                    <a href="https://github.com/MosheShiri07/Moshiko-s-Projects/tree/main/FlooderGame" class="project-link" aria-label="view code" target="_blank" rel="noopener noreferrer">
                       <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://github.com/MosheShiri07/Moshiko-s-Projects/blob/main/FlooderGame/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202025-03-08%20200123.png" class="project-link" aria-label="live demo">
+                    <a href="https://github.com/MosheShiri07/Moshiko-s-Projects/blob/main/FlooderGame/%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202025-03-08%20200123.png" class="project-link" aria-label="live demo" target="_blank" rel="noopener noreferrer">
                       <i class="fas fa-external-link-alt"></i>
             </a>
           </div>
@@ -261,11 +270,11 @@
                   Created an engaging Flooder Game and multiple Python applications demonstrating advanced algorithmic thinking, 
                   OOP principles, and GUI development using modern frameworks.
                 </p>
-                <div class="project-stats">
+                <div class="project-stats meta-row">
                   <span><i class="fas fa-clock"></i> 2 months</span>
                   <span><i class="fas fa-users"></i> Single Player</span>
                 </div>
-            <ul class="project__stack">
+            <ul class="project__stack stack-row">
               <li class="project__stack-item">Python</li>
                   <li class="project__stack-item">Tkinter</li>
               <li class="project__stack-item">Git</li>
@@ -280,7 +289,7 @@
                 </div>
                 <div class="project-overlay">
                   <div class="project-links">
-                    <a href="https://github.com/MosheShiri07" class="project-link" aria-label="view code">
+                    <a href="https://github.com/MosheShiri07" class="project-link" aria-label="view code" target="_blank" rel="noopener noreferrer">
                       <i class="fab fa-github"></i>
                     </a>
                     <a href="#" class="project-link" aria-label="live demo">
@@ -295,11 +304,11 @@
                   Designed and implemented complex network architectures including VLANs, VoIP systems, and enterprise-grade 
                   security solutions. Managed Windows Server environments and VMware infrastructure.
                 </p>
-                <div class="project-stats">
+                <div class="project-stats meta-row">
                   <span><i class="fas fa-clock"></i> Ongoing</span>
                   <span><i class="fas fa-server"></i> 100+ devices</span>
                 </div>
-            <ul class="project__stack">
+            <ul class="project__stack stack-row">
               <li class="project__stack-item">Network Switches</li>
                   <li class="project__stack-item">VMware</li>
                   <li class="project__stack-item">Windows Server</li>
@@ -316,7 +325,7 @@
           <h2 class="section__title">Technical Skills</h2>
           <div class="skills__grid">
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-python"></i>
               </div>
               <h3>Python</h3>
@@ -324,7 +333,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-code"></i>
               </div>
               <h3>C/C++</h3>
@@ -332,7 +341,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-microsoft"></i>
               </div>
               <h3>C#</h3>
@@ -340,7 +349,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-js-square"></i>
               </div>
               <h3>JavaScript</h3>
@@ -348,7 +357,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-terminal"></i>
               </div>
               <h3>PowerShell</h3>
@@ -356,7 +365,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-server"></i>
               </div>
               <h3>Windows Server</h3>
@@ -364,7 +373,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-cube"></i>
               </div>
               <h3>VMware</h3>
@@ -372,7 +381,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-network-wired"></i>
               </div>
               <h3>Networking</h3>
@@ -380,7 +389,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-aws"></i>
               </div>
               <h3>AWS</h3>
@@ -388,7 +397,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-google"></i>
               </div>
               <h3>Google Cloud</h3>
@@ -396,7 +405,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-git-alt"></i>
               </div>
               <h3>Git</h3>
@@ -404,7 +413,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-database"></i>
               </div>
               <h3>SQL</h3>
@@ -412,7 +421,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fab fa-html5"></i>
               </div>
               <h3>HTML/CSS</h3>
@@ -420,7 +429,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-plug"></i>
               </div>
               <h3>RESTful APIs</h3>
@@ -428,7 +437,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-shield-alt"></i>
               </div>
               <h3>Cybersecurity</h3>
@@ -436,7 +445,7 @@
             </div>
 
             <div class="skill-card">
-              <div class="skill-card__icon">
+              <div class="skill-card__icon icon-badge">
                 <i class="fas fa-tools"></i>
               </div>
               <h3>Active Directory</h3>
@@ -520,7 +529,7 @@
           <h2 class="section__title">Certifications & Education</h2>
           <div class="certifications__grid">
             <div class="cert__card" data-aos="zoom-in">
-              <div class="cert__icon">
+              <div class="cert__icon icon-badge">
                 <i class="fab fa-aws"></i>
               </div>
               <h3>AWS Cloud Practitioner</h3>
@@ -529,7 +538,7 @@
             </div>
 
             <div class="cert__card" data-aos="zoom-in" data-aos-delay="100">
-              <div class="cert__icon">
+              <div class="cert__icon icon-badge">
                 <i class="fab fa-google"></i>
               </div>
               <h3>Google Cloud Associate</h3>
@@ -538,7 +547,7 @@
             </div>
 
             <div class="cert__card" data-aos="zoom-in" data-aos-delay="200">
-              <div class="cert__icon">
+              <div class="cert__icon icon-badge">
                 <i class="fas fa-graduation-cap"></i>
               </div>
               <h3>Computer Science Degree</h3>
@@ -547,7 +556,7 @@
             </div>
 
             <div class="cert__card" data-aos="zoom-in" data-aos-delay="300">
-              <div class="cert__icon">
+              <div class="cert__icon icon-badge">
                 <i class="fas fa-network-wired"></i>
               </div>
                 <h3>Network Certification</h3>
@@ -586,10 +595,10 @@
                 </div>
               </div>
               <div class="contact__social">
-                <a href="https://github.com/MosheShiri07" class="social-link" aria-label="GitHub">
+                <a href="https://github.com/MosheShiri07" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/moshe-shiri-403581217/" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/moshe-shiri-403581217/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-linkedin"></i>
                 </a>
               </div>
@@ -624,6 +633,8 @@
       <a
         href="https://github.com/MosheShiri07"
         class="link footer__link"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Created By Moshe Shiri
       </a>
