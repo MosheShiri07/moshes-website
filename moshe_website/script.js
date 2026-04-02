@@ -16,7 +16,7 @@ const getBtnTheme = localStorage.getItem('portfolio-btn-theme');
 if (getBodyTheme && getBtnTheme) {
   addThemeClass(getBodyTheme, getBtnTheme);
 } else {
-  addThemeClass('light', 'fa-moon');
+  addThemeClass('dark', 'fa-sun');
 }
 
 const isDark = () => body.classList.contains('dark');
@@ -228,7 +228,7 @@ const showNotification = (message, type = 'info') => {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: ${type === 'success' ? '#48bb78' : '#667eea'};
+    background: ${type === 'success' ? '#22c55e' : '#3b82f6'};
     color: white;
     padding: 1rem 1.5rem;
     border-radius: 10px;
@@ -610,7 +610,7 @@ const initAdvancedContactForm = () => {
   }
 
   function clearFieldError(field) {
-    field.style.borderColor = 'rgba(102, 126, 234, 0.2)';
+    field.style.borderColor = 'rgba(59, 130, 246, 0.2)';
     const errorElement = field.parentNode.querySelector('.field-error');
     if (errorElement) {
       errorElement.remove();
@@ -692,10 +692,10 @@ const showAdvancedNotification = (message, type = 'info') => {
   
   function getNotificationColor(type) {
     switch(type) {
-      case 'success': return '#48bb78';
-      case 'error': return '#f56565';
-      case 'warning': return '#ed8936';
-      default: return '#667eea';
+      case 'success': return '#22c55e';
+      case 'error': return '#ef4444';
+      case 'warning': return '#f59e0b';
+      default: return '#3b82f6';
     }
   }
   
@@ -808,7 +808,7 @@ const initParticles = () => {
 
     draw() {
       const isDark = body.classList.contains('dark');
-      ctx.fillStyle = isDark ? `rgba(160, 174, 192, ${this.opacity})` : `rgba(102, 126, 234, ${this.opacity})`;
+      ctx.fillStyle = isDark ? `rgba(59, 130, 246, ${this.opacity * 0.6})` : `rgba(29, 78, 216, ${this.opacity * 0.4})`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
@@ -839,9 +839,9 @@ const initParticles = () => {
 
         if (distance < 100) {
           const isDark = body.classList.contains('dark');
-          ctx.strokeStyle = isDark 
-            ? `rgba(160, 174, 192, ${0.1 * (1 - distance / 100)})` 
-            : `rgba(102, 126, 234, ${0.1 * (1 - distance / 100)})`;
+          ctx.strokeStyle = isDark
+            ? `rgba(59, 130, 246, ${0.08 * (1 - distance / 100)})`
+            : `rgba(29, 78, 216, ${0.06 * (1 - distance / 100)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
