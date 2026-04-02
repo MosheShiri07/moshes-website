@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+/* ─── ACCENT COLORS (shared across both modes) ─────────── */
+:root {
+  --mint:       #00cc7a;
+  --cyber-blue: #0284c7;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --mint:       #00ff9f;
+  --cyber-blue: #00c2ff;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  ::selection {
+    background-color: rgba(0, 204, 122, 0.2);
+    color: var(--mint);
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 130, 200, 0.35);
+    border-radius: 2px;
+  }
+}
+
+/* ─── TERMINAL (always dark regardless of theme) ───────── */
+.terminal-dark {
+  background: #0a0a0a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ─── DOT GRID ──────────────────────────────────────────── */
+.dot-grid-light {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.dot-grid-dark {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ─── GLOW UTILITIES ────────────────────────────────────── */
+.glow-mint-dark  { box-shadow: 0 0 24px rgba(0,255,159,0.2),  0 0 48px rgba(0,255,159,0.06); }
+.glow-mint-light { box-shadow: 0 0 24px rgba(0,204,122,0.25), 0 0 48px rgba(0,204,122,0.08); }
+
+/* ─── GLASS CARD ─────────────────────────────────────────── */
+.glass-light {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+}
+.glass-dark {
+  background: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+}
+
+/* ─── MARQUEE ────────────────────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.marquee-track         { animation: marquee         30s linear infinite; will-change: transform; }
+.marquee-track-reverse { animation: marquee-reverse 35s linear infinite; will-change: transform; }
+.marquee-track:hover, .marquee-track-reverse:hover { animation-play-state: paused; }
+
+/* ─── TIMELINE LINE ─────────────────────────────────────── */
+.timeline-line-dark  { background: linear-gradient(to bottom, transparent, #00c2ff 20%, #00ff9f 80%, transparent); }
+.timeline-line-light { background: linear-gradient(to bottom, transparent, #0284c7 20%, #00cc7a 80%, transparent); }
+
+/* ─── CURSOR BLINK ──────────────────────────────────────── */
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.cursor-blink { animation: blink 1s step-end infinite; }
+
+/* ─── GRADIENT TEXT ─────────────────────────────────────── */
+.gradient-text-mint {
+  background: linear-gradient(135deg, var(--mint), var(--cyber-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── SECTION TAG ────────────────────────────────────────── */
+.section-tag {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyber-blue);
+}
