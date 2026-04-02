@@ -107,7 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typingElement) {
     const words = [
       'IT & Security Engineer',
-      'Tech Enthusiast'
+      'Cloud Infrastructure Specialist',
+      'Automation Enthusiast'
     ];
     new TypeWriter(typingElement, words, 2000);
   }
@@ -1008,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Stability-first motion mode: keep UI clean and reduce scroll jank by disabling
   // heavier / mouse-driven effects by default.
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const motionMode = 'mostlyLite'; // 'mostlyLite' or 'full'
+  const motionMode = 'full'; // 'mostlyLite' or 'full'
   const disableHeavyEffects = motionMode === 'mostlyLite' || prefersReduced;
 
   if (!disableHeavyEffects) {
