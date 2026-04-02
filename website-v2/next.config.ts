@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
-import { setupDevPlatform } from "@cloudflare/next-on-pages/next-dev";
 
+// Cloudflare dev platform — only in development, wrapped in async to avoid top-level await
 if (process.env.NODE_ENV === "development") {
-  await setupDevPlatform();
+  void import("@cloudflare/next-on-pages/next-dev").then(({ setupDevPlatform }) =>
+    setupDevPlatform()
+  );
 }
 
-const nextConfig: NextConfig = {
-  // Required for Cloudflare Pages deployment
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

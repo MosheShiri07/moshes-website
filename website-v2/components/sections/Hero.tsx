@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/data";
 
 // Each terminal line: key (cyan), value (white), with optional mint-colored value
 const terminalLines = [
-  { key: "[USER]",   value: "m.shiri@rapyd" },
+  { key: "[USER]",   value: "Moshe Shiri", bold: true },
   { key: "[ROLE]",   value: "IT & Security Engineer" },
   { key: "[SCALE]",  value: "1,000+ Identities • Global Enterprise" },
   { key: "[STACK]",  value: "[Python, Go, Terraform, GCP, AWS]" },
@@ -65,7 +65,7 @@ function TerminalContent() {
               <span className="text-[#00ff9f] font-semibold">99.9%</span>
             </span>
           ) : (
-            <span className="text-white">{line.value}</span>
+            <span className={`text-white${line.bold ? " font-bold" : ""}`}>{line.value}</span>
           )}
         </div>
       ))}

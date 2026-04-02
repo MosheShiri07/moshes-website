@@ -5,7 +5,7 @@ export const siteConfig = {
   email: "moshikoshiri03@gmail.com",
   location: "Israel",
   github: "https://github.com/MosheShiri07",
-  linkedin: "https://www.linkedin.com/in/mosheshiri",
+  linkedin: "https://www.linkedin.com/in/moshe-shiri-403581217/",
   resumeUrl: "https://drive.google.com/file/d/1oJdOBmOIFaHQEiGijYoHQxlz-IwGNIlA/view?usp=sharing",
   description:
     "IT & Security Engineer at Rapyd, specializing in cloud infrastructure, identity automation, and zero-trust security architectures.",

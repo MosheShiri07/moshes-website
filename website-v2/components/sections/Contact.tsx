@@ -61,7 +61,7 @@ export default function Contact() {
             <motion.div initial={{ opacity: 0, y: 12 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col gap-3 mt-2">
               <ContactInfoRow label="Email" value={siteConfig.email} href={`mailto:${siteConfig.email}`} color="mint" />
-              <ContactInfoRow label="LinkedIn" value="linkedin.com/in/mosheshiri" href={siteConfig.linkedin} color="blue" />
+              <ContactInfoRow label="LinkedIn" value="linkedin.com/in/moshe-shiri-403581217" href={siteConfig.linkedin} color="blue" />
               <ContactInfoRow label="GitHub" value="github.com/MosheShiri07" href={siteConfig.github} color="blue" />
               <ContactInfoRow label="Location" value={`${siteConfig.location} · Open to remote`} color="mint" />
             </motion.div>
@@ -82,7 +82,7 @@ export default function Contact() {
               <InputField name="subject" label="Subject" type="text" placeholder="What are you reaching out about?" required disabled={formState === "sending"} />
               <div className="flex flex-col gap-1.5">
                 <label className="font-mono text-[11px] text-slate-500 dark:text-[#4b5563] uppercase tracking-wider">Message</label>
-                <textarea name="message" placeholder="Tell me about the role, project, or question..." required rows={4}
+                <textarea name="message" placeholder="Enter your message or technical inquiry here..." required rows={4}
                   disabled={formState === "sending"}
                   className="w-full rounded-lg text-sm font-mono resize-none focus:outline-none transition-all disabled:opacity-50
                     bg-slate-50 dark:bg-white/[0.03]
